@@ -11,7 +11,9 @@ export default function Header() {
   const handleToggleMenu = () => {
     setOn(!on);
     const body: HTMLElement | any = document.querySelector("body");
-    body.classList.toggle("mobile-nav-active");
+    if (body) {
+      body.classList.toggle("mobile-nav-active");
+    }
   };
 
   return (
