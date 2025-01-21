@@ -21,7 +21,6 @@ export default function Home() {
           पास एक Passive इनकम सोर्स हो, जिससे वे एक्स्ट्रा कमाई कर सकें.
         </p>
         <Image
-          loading="eager"
           src={"/paisa-kamane-wali-website.png"}
           alt="Paise Kamane Wali Website"
           width={"1280"}
