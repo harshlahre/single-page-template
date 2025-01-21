@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-black: #000000;
+  --color-black-rgb: 0, 0, 0;
+  --font-poppins: Poppins;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--font-poppins);
+}
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--font-poppins);
+}
+.post-content h2 {
+  margin-top: 25px;
+}
+h3 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: var(--font-poppins);
+}
+p {
+  font-size: 17px;
+  line-height: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-family: var(--font-poppins);
+}
+li {
+  font-size: 17px;
+  line-height: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: var(--font-poppins);
+}
+.image {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.header {
+  height: 70px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: white;
+}
+.header .logo h2 {
+  font-size: 25px;
+  font-weight: 700;
+  color: green;
+  font-family: var(--font-poppins);
+  padding-left: 16px;
+}
+.footer-columns {
+  width: 33.33%;
+  padding: 20px;
+}
+.column-1 {
+  padding-right: 50px;
+}
+.footer-columns li a:hover {
+  color: #b9c4ce
+}
+a:hover {
+  color:#004ed7;
+}
+/*--------------------------------------------------------------
+# Desktop Navigation 
+--------------------------------------------------------------*/
+@media (min-width: 1280px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  .main-content {
+    margin: 70px auto 10px;
+    width: 950px;
+    word-break: break-word;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover > a {
+    color: #004ed7;
+  }
+
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+  # Mobile Navigation
+  --------------------------------------------------------------*/
+@media (max-width: 1279px) {
+  .navbar {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    inset: 60px 15px 730px 17px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+
+  .main-content {
+    margin: 70px auto 10px;
+    width: 100%;
+    word-break: break-word;
+  }
+  
+  .post-meta p {
+    font-size: 14px;
+  }
+
+  .post-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 500;
+    color: #212529;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover > a {
+    color: #212529;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-block;
+    color: #596d80;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 0;
+    transition: 0.5s;
+  }
+
+  .mobile-nav-toggle.bi-x {
+    color: #000;
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    color: #fff;
+  }
+
+  .mobile-nav-active .navbar {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(var(--color-black-rgb), 0.6);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navbar > ul {
+    display: block;
+  }
+  .footer-section {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-columns {
+    width: 100%;
+  }
+  .column-1 {
+    padding-right: 0;
+  }
+  .sub-footer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /_next/static/
+Disallow: /_not-found
+Allow: /
+
+Sitemap: https://earn.hindisink.com/sitemap.xml
